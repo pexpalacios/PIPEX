@@ -14,7 +14,7 @@ LIBFT = $(LIBFT_PATH)/libft.a
 FTINCL = -L libft/ -lft
 
 BLUE = \033[1;34m
-RED = \033[1;31m
+YELLOW = \033[1;33m
 GREEN = \033[1;32m
 RESET = \033[0m
 
@@ -42,12 +42,12 @@ $(OBJ_DIR):
 clean:
 	@$(MAKE) -C $(LIBFT_PATH) clean
 	@rm -rf $(OBJ_DIR)
-	@echo "$(RED)Objs removed$(RESET)"
+	@echo "$(YELLOW)[Objs removed]$(RESET)"
 
 fclean:clean
 	@$(MAKE) -C $(LIBFT_PATH) fclean
 	@rm -rf $(NAME)
-	@echo "$(RED)$(NAME) removed$(RESET)"
+	@echo "$(YELLOW)[$(NAME) removed]$(RESET)"
 
 re: fclean all
 
